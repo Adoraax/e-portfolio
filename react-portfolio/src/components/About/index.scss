@@ -1,0 +1,85 @@
+.stage-cube-cont {
+  width: 50%; /* Occupies the right half of the screen */
+  height: 100%; /* Full height of the screen */
+  display: flex;
+  justify-content: center; /* Center horizontally within the right half */
+  align-items: center; /* Center vertically */
+  position: absolute;
+  top: 0;
+  right: 0; /* Position to the right half of the screen */
+  overflow: hidden;
+}
+
+.cubespinner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: center center; /* Rotates around the cube's exact center */
+
+  width: 300px; /* Size of the cube */
+  height: 300px;
+  position: relative; /* To position cube faces correctly */
+
+  div {
+    position: absolute;
+    width: 300px; /* Cube face width */
+    height: 300px; /* Cube face height */
+    border: 1px solid #ccc;
+    background: rgba(228, 116, 222, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px rgb(235, 167, 252);
+  }
+
+  .face1 {
+    transform: translateZ(150px); /* Front face */
+    color: #dd0031;
+  }
+  .face2 {
+    transform: rotateY(90deg) translateZ(150px); /* Right face */
+    color: #f0ed29;
+  }
+  .face3 {
+    transform: rotateY(180deg) translateZ(150px); /* Back face */
+    color: #28a4d9;
+  }
+  .face4 {
+    transform: rotateY(-90deg) translateZ(150px); /* Left face */
+    color: #5ed4f4;
+  }
+  .face5 {
+    transform: rotateX(90deg) translateZ(150px); /* Top face */
+    color: #efd81d;
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(150px); /* Bottom face */
+    color: #35c4f0;
+  }
+}
+
+@keyframes spincube {
+  0%,
+  100% {
+    transform: rotateX(0deg) rotateY(0deg); /* Start position */
+  }
+  16% {
+    transform: rotateY(-90deg); /* Rotate along Y-axis */
+  }
+  33% {
+    transform: rotateY(-90deg) rotateX(90deg); /* Add X-axis rotation */
+  }
+  50% {
+    transform: rotateY(-180deg) rotateX(90deg); /* Further rotation */
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg); /* Continue */
+  }
+  83% {
+    transform: rotateX(90deg) rotateY(-360deg); /* Full rotation */
+  }
+}
