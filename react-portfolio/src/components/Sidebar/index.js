@@ -1,9 +1,10 @@
 import './index.scss'
+import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons' // Add this import
 
 const Sidebar = () => (
@@ -24,6 +25,16 @@ const Sidebar = () => (
       >
         <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
       </NavLink>
+      
+      <NavLink
+          activeclassname="active"
+          className="portfolio-link"
+          to="/portfolio"
+          //onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+        </NavLink>
+
       <NavLink
         exact="true"
         activeclassname="active"
