@@ -8,9 +8,9 @@ import Loader from 'react-loaders'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = [' ', 'D', 'a', 'n', 'i', 'e', 'l']
+  const nameArray = [' ', 'D', 'a', 'n', 'i', 'e', 'l', '.']
   const jobArray = [
-    's',
+    'S',
     'o',
     'f',
     't',
@@ -27,6 +27,7 @@ const Home = () => {
     'e',
     'e',
     'r',
+    '.',
   ]
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const Home = () => {
     <>
       <div className="home-page">
         <div className="text-zone">
-          <Loader type="pacman" /> {}
+          
           <h1>
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i,</span>
@@ -64,7 +65,7 @@ const Home = () => {
             CONTACT ME
           </ Link>
         </div>
-        
+        <Loader type="pacman" /> {}
       </div>
     </>
   )
