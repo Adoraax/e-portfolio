@@ -10,8 +10,8 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons' // Add
 const Sidebar = () => (
   <div className="nav-bar">
     <Link className="logo" to="/">
-      <img src={LogoS} alt="logo" />
-      <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
+      <img /*src={LogoS} alt="logo"*/ />
+      <img /*className="sub-logo" src={LogoSubtitle} alt="slobodan"*/ />
     </Link>
     <nav>
       <NavLink exact="true" activeclassname="active" to="/">
