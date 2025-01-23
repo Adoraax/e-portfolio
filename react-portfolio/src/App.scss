@@ -1,4 +1,4 @@
-$primary-color: #ffd700;
+$primary-color: #ff007f;
 
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
@@ -11,17 +11,15 @@ $primary-color: #ffd700;
 }
 
 @font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2'),
-    url('./assets/fonts/LaBelleAurore.woff') format('woff');
+  font-family: 'Orbitron';
+  src: url('./assets/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
-    url('./assets/fonts/CoolveticaRg-Regular.woff') format('woff');
+  font-family: 'Audiowide';
+  src: url('./assets/fonts/Audiowide-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
