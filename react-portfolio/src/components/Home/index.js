@@ -57,7 +57,7 @@ const Home = () => {
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={19}
+              idx={18}
             />
           </h1>
           <h2>Backend Developer / Cybersecurity </h2>

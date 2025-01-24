@@ -1,34 +1,28 @@
 {
     "portfolio": [
         {
-            "cover": "/portfolio/1/one.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "cover": "/portfolio/3/3.png",
+            "title": "Soulkeeper SFML Game/Game Engine",
+            "description": "C++, SFML",
+            "url": "https://github.com/Adoraax/Soulkeeper-combat"
         },
         {
-            "cover": "/portfolio/1/one.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "cover": "/portfolio/2/2.jpg",
+            "title": "Travel Agency Management System",
+            "description": "Java, JavaFX",
+            "url": "https://github.com/Adoraax/travel-agencym"
         },
         {
-            "cover": "/portfolio/1/one.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "cover": "/portfolio/C++/C++.png",
+            "title": "Custom Conatainer Iterator",
+            "description": "C++",
+            "url": "https://github.com/Adoraax/Custom-Container-Iterators"
         },
         {
-            "cover": "/portfolio/1/one.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
-        },
-        {
-            "cover": "/portfolio/1/one.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "cover": "/portfolio/C++/C++.png",
+            "title": "Static Analysis Tool",
+            "description": "C++, LLVM",
+            "url": "https://github.com/Adoraax/Static-Analysis-Tool-LLVM"
         }
     ]
 }
