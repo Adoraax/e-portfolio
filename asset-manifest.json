@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-portfolio/static/css/main.40ff3be5.css",
-    "main.js": "/e-portfolio/static/js/main.918689f8.js",
+    "main.css": "/e-portfolio/static/css/main.33eac4d0.css",
+    "main.js": "/e-portfolio/static/js/main.8f373edc.js",
     "static/js/488.15c117bb.chunk.js": "/e-portfolio/static/js/488.15c117bb.chunk.js",
     "static/media/Audiowide-Regular.ttf": "/e-portfolio/static/media/Audiowide-Regular.2017bdb174a62d0daa3e.ttf",
     "static/media/Orbitron-VariableFont_wght.ttf": "/e-portfolio/static/media/Orbitron-VariableFont_wght.7228a1c750b75b23bdb4.ttf",
@@ -9,12 +9,12 @@
     "static/media/logo_sub.png": "/e-portfolio/static/media/logo_sub.19f3ab25ab15fd848b30.png",
     "static/media/logo-s.png": "/e-portfolio/static/media/logo-s.bfc9f81846bda5218dab.png",
     "index.html": "/e-portfolio/index.html",
-    "main.40ff3be5.css.map": "/e-portfolio/static/css/main.40ff3be5.css.map",
-    "main.918689f8.js.map": "/e-portfolio/static/js/main.918689f8.js.map",
+    "main.33eac4d0.css.map": "/e-portfolio/static/css/main.33eac4d0.css.map",
+    "main.8f373edc.js.map": "/e-portfolio/static/js/main.8f373edc.js.map",
     "488.15c117bb.chunk.js.map": "/e-portfolio/static/js/488.15c117bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40ff3be5.css",
-    "static/js/main.918689f8.js"
+    "static/css/main.33eac4d0.css",
+    "static/js/main.8f373edc.js"
   ]
 }
