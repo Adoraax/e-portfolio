@@ -14,7 +14,6 @@ const Contact = () => {
       setLetterClass('text-animate-hover')
     }, 3000)
 
-    // Cleanup function to clear the timeout
     return () => clearTimeout(timeoutId)
   }, [])
 
@@ -50,9 +49,10 @@ const Contact = () => {
           />
         </h1>
         <p>
-          I am interested in freelance opportunities - especially ambitious or
-          large projects. However, if you have other requests or questions,
-          don't hesitate to contact me using the form below.
+          I&apos;m currently open to internship and graduate software
+          engineering opportunities, as well as interesting projects and
+          collaborations. If you&apos;d like to get in touch, send me a message
+          using the form below.
         </p>
         <div className="contact-form">
           <form ref={form} onSubmit={sendEmail}>
@@ -88,16 +88,15 @@ const Contact = () => {
       <div className="info-map">
         Daniel Sorouni,
         <br />
-        [redacted]
+        Sydney, NSW, Australia
         <br />
-        Sydney, NSW, 2206 <br />
         <span>dan.sorouni@gmail.com</span>
       </div>
       <div className="map-wrap">
-        <MapContainer center={[-33.8688, 151.2093]} zoom={12}>
+        <MapContainer center={[-33.8688, 151.2093]} zoom={11}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker position={[-33.8688, 151.2093]}>
-            <Popup>Your Location</Popup>
+            <Popup>Based in Sydney, Australia</Popup>
           </Marker>
         </MapContainer>
       </div>

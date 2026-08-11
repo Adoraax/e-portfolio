@@ -148,6 +148,9 @@
      }
 
      nav {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
       top: 0;
       left: 0;
@@ -158,13 +161,16 @@
       position: fixed;
 
       &.mobile-show {
-        display: block;
+        display: flex;
       }
 
       a {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 60px;
+        font-size: 26px;
+        color: #fff;
       }
 
       a:after {
@@ -181,10 +187,31 @@
 
      .hamburger-icon,
      .close-icon {
-        position: absolute;
+        position: fixed;
         top: 15px;
         right: 15px;
         display: block;
+        cursor: pointer;
+        z-index: 3;
+     }
+
+     .close-icon {
+        z-index: 4;
+     }
+
+     nav.mobile-show ~ .hamburger-icon {
+        display: none;
+     }
+
+     .logo {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        z-index: 3;
+
+        img {
+          width: 36px;
+        }
      }
   }
 }

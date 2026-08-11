@@ -2,9 +2,15 @@
     "portfolio": [
         {
             "cover": "/portfolio/3/3.png",
-            "title": "Soulkeeper SFML Game/Game Engine",
-            "description": "C++, SFML",
+            "title": "Soulkeeper — SFML Game & Game Engine",
+            "description": "C++, SFML, Entity-Component Framework",
             "url": "https://github.com/Adoraax/Soulkeeper-combat"
+        },
+        {
+            "cover": "/portfolio/ecommerce/cover.svg",
+            "title": "E-Commerce Platform for Author",
+            "description": "React, Node.js, GraphQL, Docker",
+            "url": null
         },
         {
             "cover": "/portfolio/2/2.jpg",
@@ -14,8 +20,8 @@
         },
         {
             "cover": "/portfolio/C++/C++.png",
-            "title": "Custom Conatainer Iterator",
-            "description": "C++",
+            "title": "Custom Container Iterators",
+            "description": "C++, STL-compliant iterators",
             "url": "https://github.com/Adoraax/Custom-Container-Iterators"
         },
         {

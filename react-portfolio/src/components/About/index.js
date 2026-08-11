@@ -3,22 +3,23 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faAngular,
+  faAws,
   faJava,
   faJsSquare,
   faReact,
   faPython,
 } from '@fortawesome/free-brands-svg-icons'
 import { faC } from '@fortawesome/free-solid-svg-icons'
-import Loader from 'react-loaders' // Import the Loader component
+import Loader from 'react-loaders'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
+    return () => clearTimeout(timeoutId)
   }, [])
 
   return (
@@ -33,38 +34,37 @@ const About = () => {
             />
           </h1>
           <p>
-            I’m a driven Software Engineering student dedicated to creating
-            efficient and innovative programs. With a strong foundation in
-            programming languages like C++, Java, and Python, I thrive on
-            tackling complex problems and turning ideas into reality.
+            I&apos;m a Software Engineering student at the University of
+            Technology Sydney (graduating 2026), minoring in Cybersecurity. I
+            love building things end to end — from low-level C++ game engines
+            to cloud-deployed web applications.
           </p>
           <p>
-            Throughout my academic journey, I’ve honed my skills through
-            hands-on projects, including designing and implementing data
-            structures and algorithms to develop sustainable engineering design
-            systems, and building interactive applications with an array of
-            frameworks. In the meantime, I love to work on making my own video
-            games, developing my own 2D game engine with crisp physics
-            simulations!
+            Most recently I worked as a Software Developer Intern at Forte
+            Information Solutions (RhinoCRM), where I rebuilt the company&apos;s
+            public marketing website as a SvelteKit 2 / Svelte 5 application —
+            twelve prerendered routes, a token-driven design system with full
+            dark mode, WCAG 2.2 AA accessibility, and an automated CI/CD
+            pipeline on AWS with CodeBuild, S3 and CloudFront. I also designed
+            and deployed a self-hosted WireGuard VPN on AWS EC2, made
+            reproducible with Terraform and an idempotent installer.
           </p>
           <p>
-            I’m particularly excited about opportunities where I can contribute
-            to impactful projects, improve systems, and grow as a developer.
-            Whether it's designing robust algorithms, optimizing existing
-            codebases, or crafting intuitive user experiences, I’m committed to
-            delivering excellence and innovation.
+            Outside of work I build my own video games and a 2D game engine in
+            C++ with SFML — real-time collision detection, an entity-component
+            architecture, and a steady 60 FPS with over 100 entities on screen.
           </p>
           <p>
-            Beyond coding, I’m a young man, optimistic about the future of
-            technology. I hope my name will hold weight in the ceaseless march
-            of progress as I contribute to the era of digital transformation.
+            I&apos;m looking for opportunities where I can contribute to
+            impactful projects across full-stack, cloud and security — and keep
+            growing as an engineer.
           </p>
         </div>
 
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faAngular} />
+              <FontAwesomeIcon icon={faAws} />
             </div>
             <div className="face2">
               <FontAwesomeIcon icon={faPython} />
@@ -84,7 +84,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" /> {}
+      <Loader type="pacman" />
     </>
   )
 }
