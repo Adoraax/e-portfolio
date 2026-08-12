@@ -19,7 +19,7 @@
       "title": "Travel Agency Management System",
       "description": "Modular travel booking application for searching, booking and managing packages, with dynamic pricing driven by seasonal demand and availability.",
       "tech": ["Java", "JavaFX", "OOP"],
-      "url": "https://github.com/Adoraax/travel-agencym"
+      "url": "https://github.com/Adoraax/travel-agency"
     },
     {
       "cover": "portfolio/covers/static-analysis.svg",

@@ -1,10 +1,26 @@
 import { useEffect, useState, useRef } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import L from 'leaflet'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import usePageTitle from '../../hooks/usePageTitle'
 import 'leaflet/dist/leaflet.css'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import './index.scss'
+
+// Leaflet guesses its icon URLs from the stylesheet path, which resolves to the
+// site root under a bundler and 404s. Point it at the bundled assets instead.
+const mapMarker = L.icon({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+})
 
 const SERVICE_ID = 'service_j9boa8o'
 const TEMPLATE_ID = 'template_paivpr1'
@@ -153,7 +169,7 @@ const Contact = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[-33.8688, 151.2093]}>
+          <Marker position={[-33.8688, 151.2093]} icon={mapMarker}>
             <Popup>Based in Sydney, Australia</Popup>
           </Marker>
         </MapContainer>

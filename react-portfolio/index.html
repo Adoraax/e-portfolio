@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#121212" />
 
+    <!--
+      GitHub Pages cannot set response headers, so the policy is declared here.
+      'unsafe-inline' is required for styles only: Leaflet positions map tiles
+      via inline style attributes. Scripts stay locked to same-origin.
+      Note: frame-ancestors is ignored in a meta CSP, so clickjacking protection
+      would need real headers (a CDN or custom host) to enforce.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               base-uri 'self';
+               object-src 'none';
+               frame-src 'none';
+               form-action 'none';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
+               img-src 'self' data: https://*.tile.openstreetmap.org;
+               connect-src 'self' https://api.emailjs.com;
+               upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <title>Daniel Sorouni | Software Engineer</title>
     <meta
       name="description"
