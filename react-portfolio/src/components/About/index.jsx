@@ -44,23 +44,35 @@ const About = () => {
           />
         </h1>
         <p>
-          I&apos;m a Software Engineering student at the University of
-          Technology Sydney, graduating in 2026 with a minor in Cybersecurity. I
-          like working across the whole stack — from low-level C++ where every
-          frame budget counts, up to cloud infrastructure and the interface
-          someone actually touches.
+          I&apos;m a final-year Software Engineering student at the University
+          of Technology Sydney, with a minor in Cybersecurity. First and
+          foremost I think of myself as a broad software engineer: I enjoy
+          working across the whole stack, from low-level C++ systems through to
+          full-stack web applications and the cloud infrastructure that runs
+          them. What draws me to a problem is the chance to take it from a first
+          idea all the way to a finished, working product.
         </p>
         <p>
-          What I enjoy most is taking something tangled and making it simple:
-          replacing a hand-maintained website with a design system, turning a
-          manual deployment into a pipeline, or getting a physics loop to hold
-          60&nbsp;FPS with a hundred entities on screen. Accessibility and
-          performance aren&apos;t polish to me — they&apos;re part of the
-          definition of done.
+          Most recently I completed a software developer internship at Forte
+          Information Solutions (RhinoCRM), rebuilding the company&apos;s public
+          marketing website from the ground up — migrating a legacy static site
+          to a modern SvelteKit application, building a full design system with
+          dark mode and accessibility, and setting up the AWS pipeline that
+          deploys it. Alongside it I designed and built a self-hosted VPN on AWS
+          as a proof of concept for the team.
         </p>
         <p>
-          Outside of coursework I build my own games and the engine underneath
-          them. I&apos;m currently open to graduate software engineering roles.
+          Outside of set work I build my own projects to keep learning: a 2D
+          game and physics engine in C++, a headless e-commerce platform, a set
+          of STL-compliant container iterators. That&apos;s where I get to go
+          deep and understand how things really work underneath.
+        </p>
+        <p>
+          I&apos;d describe my approach as independent, driven and
+          growth-minded, and I&apos;m thorough by nature — I&apos;d rather take
+          the time to build something correctly than rush it and cut corners.
+          I&apos;m looking for a graduate role where I can keep building real,
+          meaningful software alongside people I can learn from.
         </p>
         <p className="about-links">
           <Link to="/resume" className="btn">

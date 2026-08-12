@@ -1,4 +1,5 @@
 {
+  "objective": "Final-year Bachelor of Software Engineering student (minor in Cybersecurity) seeking a graduate software engineering role. Hands-on experience across full-stack web development, cloud infrastructure and low-level C++ systems, with a track record of taking products from first commit to launch. Motivated by challenging, well-engineered work and continuous technical growth.",
   "experience": [
     {
       "role": "Software Developer Intern",
@@ -92,6 +93,24 @@
         "Cloud networking & security",
         "REST & GraphQL APIs"
       ]
+    }
+  ],
+  "coreSkills": [
+    {
+      "name": "Problem-solving & debugging",
+      "detail": "Diagnosed and resolved non-obvious production issues during my internship, including framework CSS tree-shaking of runtime state classes, CSS/GSAP transform conflicts on mobile, and an AWS networking misconfiguration that was breaking egress and adding a duplicate charge."
+    },
+    {
+      "name": "Self-directed learning",
+      "detail": "Independently picked up SvelteKit 2, Svelte 5, GSAP and AWS tooling to deliver the marketing-site rebuild, and build personal projects such as a C++ game engine and a headless e-commerce platform to go deeper on fundamentals."
+    },
+    {
+      "name": "Communication & collaboration",
+      "detail": "Worked with the Forte frontend team to integrate the redirect UI and ship a launch-ready site, and authored setup, operations and disaster-recovery documentation to hand the VPN work over to non-experts."
+    },
+    {
+      "name": "Attention to detail",
+      "detail": "Ran automated cross-route audits for accessibility, broken links, layout overflow and console errors, and traced every marketing claim back to a company source, shipping the site with zero defects found."
     }
   ]
 }

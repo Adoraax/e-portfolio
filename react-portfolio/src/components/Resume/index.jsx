@@ -17,7 +17,7 @@ const Resume = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const { experience, education, skills } = resume
+  const { objective, experience, education, skills, coreSkills } = resume
 
   return (
     <div className="container resume-page">
@@ -34,6 +34,8 @@ const Resume = () => {
           <span>Download PDF</span>
         </a>
       </div>
+
+      <p className="resume-objective">{objective}</p>
 
       <section className="resume-section" aria-labelledby="experience-heading">
         <h2 id="experience-heading">Experience</h2>
@@ -104,6 +106,18 @@ const Resume = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="resume-section" aria-labelledby="core-heading">
+        <h2 id="core-heading">Core Skills</h2>
+        <dl className="core-skills">
+          {coreSkills.map((s) => (
+            <div className="core-skill" key={s.name}>
+              <dt>{s.name}</dt>
+              <dd>{s.detail}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </div>
   )

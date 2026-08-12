@@ -36,6 +36,11 @@ main {
   display: none;
 }
 
+// About runs long enough that the closing markers reach the résumé button.
+.page:has(.about-page) .bottom-tags {
+  display: none;
+}
+
 .bottom-tag-html {
   margin-left: -20px;
 }
