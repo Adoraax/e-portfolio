@@ -1,17 +1,14 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import reportWebVitals from './reportWebVitals'
 import { HashRouter } from 'react-router-dom'
+import 'animate.css'
 import App from './App'
-import './index.css'
+import './index.scss'
 
-const root = createRoot(document.getElementById('root'))
-root.render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
   </React.StrictMode>
 )
-
-reportWebVitals()

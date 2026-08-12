@@ -1,183 +1,162 @@
 .portfolio-page {
-    padding-left: 100px;
-    padding-right: 50px;
-    width: calc(100% - 150px);
-    position: initial;
-    height: 100%;
-    overflow: auto;
+  position: initial;
+  height: 100%;
+  overflow: auto;
+  padding: 60px var(--page-gutter) 100px calc(var(--nav-w) + var(--page-gutter));
 
-    h1.page-title {
-        margin-left: 100px;
-        margin-top: 100px;
+  h1.page-title {
+    margin: 0 0 46px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 26px;
+    max-width: 1240px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease),
+      box-shadow 0.3s var(--ease);
+
+    &:hover,
+    &:focus-within {
+      transform: translateY(-5px);
+      border-color: var(--c-accent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .project-cover {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--c-surface-raised);
+    overflow: hidden;
+
+    // Several project images have light backgrounds; this settles them into the
+    // dark card instead of ending on a hard white edge.
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(24, 24, 24, 0) 50%,
+        rgba(24, 24, 24, 0.9) 100%
+      );
     }
 
-    .images-container {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        padding-bottom: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 22px 24px;
+
+    h2 {
+      margin: 0 0 12px;
+      font-family: var(--font-display);
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--c-text);
     }
 
-    .image-box {
-        position: relative;
-        flex: 1 1 20%;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 10px;
-        max-width: calc(25% - 10px);
-
-        .portfolio-image {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .content {
-            position: absolute;
-            width: 100%;
-            z-index: 3;
-            padding: 10px 20px;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            background: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.2) 0,
-                rgba(0, 0, 0, 1)
-            );
-            bottom: -70px;
-        }
-
-        .title {
-            margin-bottom: 0;
-            margin-top: 0;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 24px;
-        }
-
-        .description {
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .btn {
-            margin-top: 30px;
-            margin-bottom: 10px;
-            padding: 0 23px;
-            height: 40px;
-            line-height: 34px;
-            border: 2px solid #ff007f;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #fff;
-            background: transparent;
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #ff007f;
-        }
-
-        .private-label {
-            display: inline-block;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            padding: 0 23px;
-            height: 40px;
-            line-height: 36px;
-            border: 2px dashed #8d8d8d;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #ccc;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        &:after {
-            content: "";
-            background: linear-gradient(180deg, #ff007f, #000);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            opacity: 0;
-        }
-
-        &:hover:after {
-            opacity: 0.85;
-        }
-
-        &:hover .content {
-            bottom: 0;
-            background: transparent;
-        }
+    p {
+      margin: 0 0 18px;
+      color: var(--c-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0 0 14px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 3px 10px;
+      border: 1px solid rgba(255, 0, 127, 0.4);
+      border-radius: 999px;
+      background: rgba(255, 0, 127, 0.08);
+      color: var(--c-accent);
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    color: var(--c-accent-2);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    svg {
+      font-size: 0.75rem;
+      transition: transform 0.25s var(--ease);
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  .project-private {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: auto 0 0;
+    color: var(--c-text-muted);
+    font-size: var(--fs-small);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    svg {
+      font-size: 0.75rem;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .portfolio-page {
-        padding: 90px 20px 20px;
-        width: 100%;
-        box-sizing: border-box;
+  .portfolio-page {
+    padding: 90px var(--page-gutter) 60px;
+    height: auto;
+    overflow: visible;
 
-        h1.page-title {
-            margin-left: 10px;
-            margin-top: 0;
-        }
-
-        .image-box {
-            flex: 1 1 40%;
-            max-width: calc(50% - 10px);
-            height: 280px;
-
-            // No hover on touch screens — keep the card info visible.
-            .content {
-                bottom: 0;
-                background: linear-gradient(
-                    180deg,
-                    rgba(0, 0, 0, 0) 0,
-                    rgba(0, 0, 0, 0.9) 40%
-                );
-            }
-
-            .title {
-                font-size: 18px;
-                line-height: 20px;
-            }
-
-            .description {
-                font-size: 12px;
-            }
-
-            .btn,
-            .private-label {
-                margin-top: 8px;
-                height: 34px;
-                line-height: 30px;
-                font-size: 12px;
-                padding: 0 14px;
-            }
-        }
+    h1.page-title {
+      margin-bottom: 34px;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .portfolio-page .image-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-        height: 300px;
+    .project-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
+  }
 }

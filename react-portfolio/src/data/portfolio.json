@@ -1,34 +1,39 @@
 {
-    "portfolio": [
-        {
-            "cover": "/portfolio/3/3.png",
-            "title": "Soulkeeper — SFML Game & Game Engine",
-            "description": "C++, SFML, Entity-Component Framework",
-            "url": "https://github.com/Adoraax/Soulkeeper-combat"
-        },
-        {
-            "cover": "/portfolio/ecommerce/cover.svg",
-            "title": "E-Commerce Platform for Author",
-            "description": "React, Node.js, GraphQL, Docker",
-            "url": null
-        },
-        {
-            "cover": "/portfolio/2/2.jpg",
-            "title": "Travel Agency Management System",
-            "description": "Java, JavaFX",
-            "url": "https://github.com/Adoraax/travel-agencym"
-        },
-        {
-            "cover": "/portfolio/C++/C++.png",
-            "title": "Custom Container Iterators",
-            "description": "C++, STL-compliant iterators",
-            "url": "https://github.com/Adoraax/Custom-Container-Iterators"
-        },
-        {
-            "cover": "/portfolio/C++/C++.png",
-            "title": "Static Analysis Tool",
-            "description": "C++, LLVM",
-            "url": "https://github.com/Adoraax/Static-Analysis-Tool-LLVM"
-        }
-    ]
+  "portfolio": [
+    {
+      "cover": "portfolio/3/3.png",
+      "title": "Soulkeeper — Game & Engine",
+      "description": "A 2D action game built on a custom engine with real-time collision detection, dynamic enemy spawning and an entity-component architecture, holding 60 FPS with 100+ entities on screen.",
+      "tech": ["C++", "SFML", "ECS"],
+      "url": "https://github.com/Adoraax/Soulkeeper-combat"
+    },
+    {
+      "cover": "portfolio/covers/ecommerce.svg",
+      "title": "E-Commerce Platform for Author",
+      "description": "Headless storefront pairing a React front end with a Blaze Commerce back end, plus a region- and product-aware Amazon affiliate redirect system served over GraphQL.",
+      "tech": ["React", "Node.js", "GraphQL", "Docker"],
+      "url": null
+    },
+    {
+      "cover": "portfolio/2/2.jpg",
+      "title": "Travel Agency Management System",
+      "description": "Modular travel booking application for searching, booking and managing packages, with dynamic pricing driven by seasonal demand and availability.",
+      "tech": ["Java", "JavaFX", "OOP"],
+      "url": "https://github.com/Adoraax/travel-agencym"
+    },
+    {
+      "cover": "portfolio/covers/static-analysis.svg",
+      "title": "Static Analysis Tool",
+      "description": "An LLVM-based pass that inspects intermediate representation to surface code-quality and correctness issues ahead of runtime.",
+      "tech": ["C++", "LLVM"],
+      "url": "https://github.com/Adoraax/Static-Analysis-Tool-LLVM"
+    },
+    {
+      "cover": "portfolio/covers/iterators.svg",
+      "title": "Custom Container Iterators",
+      "description": "STL-compliant iterators for custom data structures, fully compatible with C++ Standard Template Library algorithms and tuned for efficient memory access patterns.",
+      "tech": ["C++", "STL", "Templates"],
+      "url": "https://github.com/Adoraax/Custom-Container-Iterators"
+    }
+  ]
 }

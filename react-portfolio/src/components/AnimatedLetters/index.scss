@@ -1,32 +1,33 @@
+// Letters animate individually, but they are grouped into words so a heading
+// can only ever break at a space.
 .word {
-    display: inline-block;
-    white-space: nowrap;
-  }
+  display: inline-block;
+  white-space: nowrap;
+}
 
 .text-animate {
-    display: inline-block;
-    opacity: 0;
-    animation: bounceIn;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    min-width: 10px;
+  display: inline-block;
+  animation: bounceIn;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+  min-width: 10px;
+}
+
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+  transition: color 0.2s var(--ease);
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: var(--c-accent);
   }
-  
-  .text-animate-hover {
-    min-width: 10px;
-    display: inline-block;
-    animation-fill-mode: both;
-  
-    &:hover {
-      animation: rubberBand 1s;
-      color: #ff007f;
-    }
+}
+
+@for $i from 1 through 35 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i * 0.04}s;
   }
-  
-  @for $i from 1 through 35 {
-    .text-animate._#{$i} {
-      animation-delay: #{$i / 10}s;
-    }
-  }
-  
+}

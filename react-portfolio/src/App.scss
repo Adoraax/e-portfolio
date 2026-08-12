@@ -1,50 +1,59 @@
-$primary-color: #ff007f;
-
-@import 'animate.css';
-@import '~loaders.css/src/animations/pacman.scss';
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'Orbitron';
   src: url('./assets/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Audiowide';
   src: url('./assets/fonts/Audiowide-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-input,
-textarea {
-  font-family: 'Helvetica Neue', sans-serif;
-}
+// One button style, used by every call to action on the site.
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  border: 1px solid var(--c-accent);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--c-accent);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease),
+    transform 0.25s var(--ease);
 
+  &:hover {
+    background: var(--c-accent);
+    color: #fff;
+    transform: translateY(-2px);
+  }
 
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
 
-.loader-hidden {
-  display: none;
-}
+  &--ghost {
+    border-color: var(--c-border);
+    color: var(--c-text-muted);
 
-.loader-active {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
+    &:hover {
+      border-color: var(--c-text-muted);
+      background: transparent;
+      color: var(--c-text);
+    }
+  }
 }

@@ -1,0 +1,97 @@
+{
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "company": "Forte Information Solutions (RhinoCRM)",
+      "period": "May 2026 – August 2026",
+      "stack": ["SvelteKit 2", "Svelte 5", "AWS", "Terraform", "Docker"],
+      "highlights": [
+        "Rebuilt the company's public marketing website from a legacy hand-maintained static HTML codebase into a component-based SvelteKit 2 / Svelte 5 application — 12 prerendered routes, a token-driven design system and full dark mode — shipped launch-ready with a zero-warning ~3s production build.",
+        "Brought the site to WCAG 2.2 AA: raised brand text contrast from ~1.5:1 to 4.5:1+ with theme-aware design tokens, added keyboard and touch alternatives to pointer-only interactions, and gated every animation on prefers-reduced-motion.",
+        "Designed and built five interactive, data-accurate product demos — a drag-and-drop pipeline board, a live journey-planning SVG map and a 12-tab call card — each operable by mouse, touch and keyboard.",
+        "Cut the production payload with scripted dead-code and orphaned-asset audits, removing 115+ unused CSS rules (~19% of the global stylesheet) and 25+ legacy assets.",
+        "Reduced content publishing from hand-editing HTML to dropping in a single file by migrating 22 blog articles to a Markdown/mdsvex pipeline with frontmatter-driven listing, prerendering and client-side search.",
+        "Automated deployment by authoring the AWS CodeBuild pipeline (npm ci, SvelteKit build, artifact emission, CloudFront invalidation), moving hosting from manual file copying to full CI/CD on S3 and CloudFront.",
+        "Designed and built a self-hosted WireGuard VPN on AWS EC2 (Ubuntu/Graviton, Docker + WG-Easy) to give the team a single fixed egress IP for database whitelisting, replacing an unreliable commercial VPN.",
+        "Diagnosed a networking misconfiguration where an allocated Elastic IP was never attached to the instance — restoring stable single-address egress and removing a duplicate IPv4 charge — then hardened the deployment with short-lived credentials over root keys, admin-only firewall scoping and secrets kept out of source control.",
+        "Made the VPN reproducible with an idempotent Bash installer, cloud-init and Terraform, plus operations documentation covering setup, maintenance, disaster recovery and cross-account migration."
+      ]
+    }
+  ],
+  "education": {
+    "institution": "University of Technology Sydney",
+    "degree": "Bachelor of Software Engineering",
+    "detail": "Minor in Cybersecurity",
+    "period": "Graduating 2026",
+    "result": "WAM 77.6",
+    "courses": [
+      "Data Structures and Algorithms",
+      "Programming Advanced",
+      "Mathematics Advanced",
+      "Database Fundamentals",
+      "Software Development",
+      "Software Analysis Studio",
+      "Systems Testing and Quality Management",
+      "Information Security and Management",
+      "Information System Development Methodologies",
+      "Real-time Operating Systems"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "C++",
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Bash",
+        "HTML",
+        "CSS",
+        "JavaFX",
+        "JSX",
+        "Markdown",
+        "YAML"
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": [
+        "SvelteKit 2",
+        "Svelte 5",
+        "React",
+        "Node.js",
+        "GSAP",
+        "mdsvex",
+        "SFML",
+        "SDL",
+        "LLVM"
+      ]
+    },
+    {
+      "category": "Tools & Platforms",
+      "items": [
+        "Git",
+        "AWS (EC2, S3, CloudFront, CodeBuild, IAM, VPC)",
+        "Terraform",
+        "Docker",
+        "WireGuard",
+        "Google Cloud Platform",
+        "Vite",
+        "VS Code"
+      ]
+    },
+    {
+      "category": "Practices",
+      "items": [
+        "Responsive & accessible (WCAG AA) development",
+        "Design systems",
+        "CI/CD",
+        "Infrastructure-as-Code",
+        "Cloud networking & security",
+        "REST & GraphQL APIs"
+      ]
+    }
+  ]
+}

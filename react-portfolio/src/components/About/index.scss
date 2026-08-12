@@ -1,64 +1,92 @@
+.about-page {
+  .about-links {
+    margin-top: 32px;
+  }
+}
+
 .stage-cube-cont {
-  width: 50%; /* Occupies the right half of the screen */
-  height: 100%; /* Full height of the screen */
+  width: 45%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* Center horizontally within the right half */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
-  right: 0; /* Position to the right half of the screen */
+  right: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .cubespinner {
   animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 12s;
+  animation-duration: 14s;
   transform-style: preserve-3d;
-  transform-origin: center center; /* Rotates around the cube's exact center */
-
-  width: 300px; /* Size of the cube */
-  height: 300px;
-  position: relative; /* To position cube faces correctly */
+  transform-origin: center center;
+  width: 260px;
+  height: 260px;
+  position: relative;
 
   div {
     position: absolute;
-    width: 300px; /* Cube face width */
-    height: 300px; /* Cube face height */
-    border: 1px solid #ccc;
-    background: rgba(228, 116, 222, 0.4);
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(228, 116, 222, 0.28);
     text-align: center;
-    font-size: 100px;
+    font-size: 92px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 20px 0px rgb(235, 167, 252);
+    box-shadow: 0 0 22px 0 rgba(235, 167, 252, 0.55);
   }
 
   .face1 {
-    transform: translateZ(150px); /* Front face */
-    color: #dd0031;
+    transform: translateZ(130px);
+    color: #ff9900;
   }
   .face2 {
-    transform: rotateY(90deg) translateZ(150px); /* Right face */
+    transform: rotateY(90deg) translateZ(130px);
     color: #efd81d;
   }
   .face3 {
-    transform: rotateY(180deg) translateZ(150px); /* Back face */
+    transform: rotateY(180deg) translateZ(130px);
     color: #28a4d9;
   }
   .face4 {
-    transform: rotateY(-90deg) translateZ(150px); /* Left face */
+    transform: rotateY(-90deg) translateZ(130px);
     color: #5ed4f4;
   }
   .face5 {
-    transform: rotateX(90deg) translateZ(150px); /* Top face */
+    transform: rotateX(90deg) translateZ(130px);
     color: #efd81d;
   }
   .face6 {
-    transform: rotateX(-90deg) translateZ(150px); /* Bottom face */
+    transform: rotateX(-90deg) translateZ(130px);
     color: #f82a2a;
+  }
+}
+
+@keyframes spincube {
+  0%,
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateX(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg) rotateY(-360deg);
   }
 }
 
@@ -68,33 +96,18 @@
     width: 100%;
     height: auto;
     overflow: visible;
-    padding: 40px 0 80px;
+    padding: 60px 0 90px;
   }
 
   .cubespinner {
-    transform-style: preserve-3d;
     scale: 0.55;
   }
 }
 
-@keyframes spincube {
-  0%,
-  100% {
-    transform: rotateX(0deg) rotateY(0deg); /* Start position */
-  }
-  16% {
-    transform: rotateY(-90deg); /* Rotate along Y-axis */
-  }
-  33% {
-    transform: rotateY(-90deg) rotateX(90deg); /* Add X-axis rotation */
-  }
-  50% {
-    transform: rotateY(-180deg) rotateX(90deg); /* Further rotation */
-  }
-  66% {
-    transform: rotateY(-270deg) rotateX(90deg); /* Continue */
-  }
-  83% {
-    transform: rotateX(90deg) rotateY(-360deg); /* Full rotation */
+// An endlessly spinning cube is exactly what "reduce motion" is asking about.
+@media (prefers-reduced-motion: reduce) {
+  .cubespinner {
+    animation: none;
+    transform: rotateX(-14deg) rotateY(-28deg);
   }
 }
